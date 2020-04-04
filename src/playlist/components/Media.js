@@ -4,8 +4,10 @@ import "./Media.css";
 
 
 /* PureComponente:  
-   Si se le actualizan las propiedades al componente
-   este las gestiona por si mismo.
+   Al usar este tipo de componentes no necesitamos implementar
+   el metodo shouldComponentUpdate() para evitar que se haga 
+   render cada vez que cambiamos una propiedad, PureComponent
+   lo hace por default.
 */
 class Media extends PureComponent {
   constructor(props){

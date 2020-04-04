@@ -1,21 +1,20 @@
-import React, { Component } from "react";
-import Category from "./Category";
+import React from "react";
+import PropTypes from "prop-types";
+import Media from "./Media";
 import "./Playlist.css";
 
-class Playlist extends Component {
-  render() {
-    const {
-      data: { categories }
-    } = this.props;
+function Playlist(props){
+  const {playlist} = props;
 
-    return (
-      <React.Fragment>
-        {categories.map(item => {
-          return <Category category={item} key={item.id}/>;
-        })}
-      </React.Fragment>
-    );
-  }
-}
+  return(
+    <div className="Playlist">
+      {playlist.map((item) => {
+        return(
+          <Media key={item.id} {...item}/>
+        );
+      })}
+    </div>
+  );
+};
 
 export default Playlist;

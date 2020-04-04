@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Playlist from "./src/playlist/components/Playlist"
-import data from "./src/api.json";
+import Home from "../pages/containers/Home";
+import data from "../api.json";
 
 
 const container = document.getElementById("app");
 
 //ReactDOM.render(_que_, _donde_);
 ReactDOM.render(
-  <Playlist data={data}/>,
+  <Home data={data}/>,
   container
 );
