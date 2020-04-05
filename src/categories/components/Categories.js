@@ -3,12 +3,12 @@ import Category from "./Category";
 import "./Categories.css";
 
 function Categories(props){
-    const { categories } = props;
+    const { categories, handleOpenModal} = props;
     return(
         <div className="Categories">
             {categories.map((item) => {
                 return(
-                    <Category key={item.id} {...item}/>
+                    <Category handleOpenModal={handleOpenModal} key={item.id} {...item}/>
                 );
             })}
         </div>

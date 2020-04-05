@@ -19,22 +19,14 @@ class Media extends PureComponent {
         cover: props.cover
     };
 
-    // Enlazamos la funcion con mi clase (this).
-    this.handleClick = this.handleClick.bind(this);
   }
-
-  handleClick(event){
-    this.setState({
-        title: "Modificado",
-        author: "Modificado 2"
-    })
-  };
 
   render() {
     const {title, author, cover} = this.state;
+    const {handleClick} = this.props;
 
     return (
-      <div className="Media" onClick={this.handleClick}>
+      <div className="Media" onClick={handleClick}>
         <div className="Media-cover">
           <img
             className="Media-image"

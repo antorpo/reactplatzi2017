@@ -1,0 +1,20 @@
+{
+   "acciones":{
+      "ERROR":"Ha ocurrido un error.",
+      "GUARDAR":"Guardar",
+      "CARGAR":"Cargar",
+      "INGRESAR":"Ingresar",
+      "ANULAR":"Anular planilla",
+      "EDITAR":"Editar",
+      "ACTUALIZAR":"Actualizar",
+      "BUSCAR":"Buscar",
+      "CANCELAR":"Cancelar",
+      "CERRAR":"Cerrar"
+   },
+   "modal":{
+      "videoModal":{
+         "TITULO":"Testing",
+		 "MENSAJE": "Test mensaje"
+      }
+   }
+}
