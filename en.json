@@ -16,5 +16,8 @@
          "TITULO":"Testing",
 		 "MENSAJE": "Test mensaje"
       }
+   },
+   "searchBar":{
+      "PLACEHOLDER": "Busca tu video favorito"
    }
 }
