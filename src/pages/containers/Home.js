@@ -6,6 +6,7 @@ import ModalContainer from "../../widgets/containers/ModalContainer";
 import Modal from "../../widgets/components/Modal";
 import labels from "../../../en.json";
 import HandleError from "../../error/containers/HandleError";
+import VideoPlayer from "../../player/containers/VideoPlayer";
 
 class Home extends Component {
   state = {
@@ -32,6 +33,7 @@ class Home extends Component {
     return (
       <HomeLayout>
         <Related />
+        <VideoPlayer/>
         <HandleError message={labels.acciones.ERROR}>
           <Categories
             categories={categories}

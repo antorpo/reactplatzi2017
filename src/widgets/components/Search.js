@@ -3,7 +3,7 @@ import labels from "../../../en.json";
 import "./Search.css";
 
 function Search(props) {
-  const {handleSubmit, setRef} = props;
+  const {handleSubmit,handleChange, setRef, value} = props;
 
   return (
     <form className="Search" onSubmit={handleSubmit}>
@@ -12,7 +12,9 @@ function Search(props) {
         type="text"
         placeholder={labels.searchBar.PLACEHOLDER}
         name="search"
-        ref={setRef}
+        onChange={handleChange}
+        value={value}
+        //defaultValue="Valor defecto"
       />
     </form>
   );
