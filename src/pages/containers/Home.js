@@ -33,7 +33,9 @@ class Home extends Component {
     return (
       <HomeLayout>
         <Related />
-        <VideoPlayer/>
+        <VideoPlayer
+          autoplay
+        />
         <HandleError message={labels.acciones.ERROR}>
           <Categories
             categories={categories}

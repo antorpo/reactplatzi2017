@@ -8,13 +8,13 @@ import React from "react";
     componentes.
 */
 function Icon(props) {
-  const {size, color} = props;
+  const { size, color } = props;
   return (
-    <svg
+    <svg 
+      fill={color} 
+      height={size} 
+      width={size} 
       viewBox="0 0 32 32"
-      height={size}
-      width={size}
-      fill={color}
     >
       {props.childen}
     </svg>
