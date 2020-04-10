@@ -1,13 +1,13 @@
 import React from "react";
 import "./Modal.css";
 
-function Modal(props){
-    return(
-        <div className="Modal">
-            {props.children}
-            <button onClick={props.handleClick}>X</button>
-        </div>
-    );
+function Modal(props) {
+  return (
+    <div className="Modal">
+      {props.children}
+      <button onClick={props.handleClick} className="Modal-close" />
+    </div>
+  );
 }
 
 export default Modal;
