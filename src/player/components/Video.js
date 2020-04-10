@@ -2,19 +2,19 @@ import React, { Component } from "react";
 import "./Video.css";
 
 class Video extends Component {
-  componentWillReceiveProps(nextProps){
+  componentWillReceiveProps(nextProps) {
     /* Comparar los props anteriores con unos del futuro 
        y con eso saber si ejecutar una accion o no.
     */
-    if(nextProps.pause !== this.props.pause){
+    if (nextProps.pause !== this.props.pause) {
       this.togglePlay();
     }
   }
 
-  togglePlay(){
-    if(this.props.pause){
+  togglePlay() {
+    if (this.props.pause) {
       this.video.play();
-    }else{
+    } else {
       this.video.pause();
     }
   }
@@ -25,11 +25,17 @@ class Video extends Component {
   };
 
   render() {
-    const { src, autoPlay } = this.props;
+    const { src, autoPlay, handleLoadedMetadata, handleTimeUpdate } = this.props;
 
     return (
       <div className="Video">
-        <video autoPlay={autoPlay} src={src} ref={this.setRef} />
+        <video 
+          autoPlay={autoPlay} 
+          src={src} 
+          ref={this.setRef} 
+          onLoadedMetadata={handleLoadedMetadata}
+          onTimeUpdate={handleTimeUpdate}
+        />
       </div>
     );
   }
